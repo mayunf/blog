@@ -10,7 +10,7 @@ tags: git
 git log --diff-filter=D --summary
 ```
 
-### 回复被删除的文件
+### 恢复被删除的文件
 > $commit~1 是指被删除的commit 的上一个提交，因为在commit 时已经删除了文件
 ```php
 git checkout $commit~1 filename
