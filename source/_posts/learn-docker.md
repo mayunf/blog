@@ -47,5 +47,11 @@ push      将 镜像 上传到 registry
 rmi       删除 Docker host 中的镜像
 
 search    搜索 Docker Hub 中的镜像
+
+ps        查看当前运行的容器
+
+stop $id  停止运行某个容器
+
 ```
-/usr/local/php/bin/php /export/webapps/weixin.jwsem.com/artisan 
+
+
