@@ -79,4 +79,4 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/mayunf/mayunf.github.io
+  repository: git@github.com:mayunf/mayunf.github.io.git
