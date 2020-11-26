@@ -54,3 +54,46 @@ cp /usr/local/php70/etc/php-fpm.conf /usr/local/php/etc/php-fpm.conf
 cp /usr/local/php70/etc/php-fpm.d/www.conf /usr/local/php/etc/php-fpm.d/www.conf
 
 ```
+
+
+###  PHP Startup: Unable to load dynamic library 'php_pdo_sqlsrv_73_nts.so'
+
+#### 加入微软的源
+```shell script
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssqlrelease.repo
+```
+
+#### 安装驱动（三个都要装上，缺一不可）
+```shell script
+yum install msodbcsql mssql-tools unixODBC-devel
+```
+
+#### 下载扩展
+```shell script
+https://github.com/microsoft/msphpsql
+```
+
+#### 选择对应的php版本进行下载，然后解压
+
+#### 然后把文件移动到扩展文件下面
+```shell script
+/usr/local/php/bin/php-config --extension-dir
+```
+
+#### 配置文件修改
+```shell script
+vi /etc/php.ini
+
+extension=php_sqlsrv_73_nts.so
+extension=php_pdo_sqlsrv_73_nts.so
+
+:wq!
+```
+
+#### 重启php-fpm
+```shell script
+/etc/init.d/php-fpm restart
+```
+
+
+[https://blog.csdn.net/lizarel/article/details/108066652](原文)
