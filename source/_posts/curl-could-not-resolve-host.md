@@ -1,5 +1,5 @@
 ---
-title: curl: (6) Could not resolve host: api.xiaolutuiguang.com; Name or service not known
+title: curl(6) Name or service not known
 date: 2019-02-19 10:39:35
 tags:
 - curl
